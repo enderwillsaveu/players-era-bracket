@@ -5,7 +5,12 @@ const chipFmt = new Intl.DateTimeFormat(undefined, { weekday: 'short', hour: 'nu
 const dayFmt = new Intl.DateTimeFormat(undefined, { weekday: 'short', month: 'short', day: 'numeric' });
 const longDayFmt = new Intl.DateTimeFormat(undefined, { weekday: 'long', month: 'long', day: 'numeric' });
 const vegasDay = new Intl.DateTimeFormat('en-US', { timeZone: VEGAS, month: 'short', day: 'numeric' });
-const vegasKey = new Intl.DateTimeFormat('en-CA', { timeZone: VEGAS, year: 'numeric', month: '2-digit', day: '2-digit' });
+const vegasKey = new Intl.DateTimeFormat('en-CA', {
+  timeZone: VEGAS,
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+});
 
 export const formatTime = (iso) => timeFmt.format(new Date(iso));
 export const formatDay = (iso) => dayFmt.format(new Date(iso));
@@ -42,14 +47,6 @@ export function countdown(ms) {
   const sec = s % 60;
   const pad = (n) => String(n).padStart(2, '0');
   return d > 0 ? `${d}d ${pad(h)}:${pad(m)}:${pad(sec)}` : `${pad(h)}:${pad(m)}:${pad(sec)}`;
-}
-
-export function ago(ms) {
-  const s = Math.max(0, Math.round(ms / 1000));
-  if (s < 5) return 'just now';
-  if (s < 60) return `${s}s ago`;
-  const m = Math.round(s / 60);
-  return m < 60 ? `${m}m ago` : `${Math.round(m / 60)}h ago`;
 }
 
 export function statusLine(game) {

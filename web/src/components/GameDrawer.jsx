@@ -1,7 +1,7 @@
 import { useEffect, useMemo } from 'react';
-import { motion } from 'motion/react';
+import { motion, useDragControls } from 'motion/react';
 import { ExternalLink, MapPin, Tv, Users, X } from 'lucide-react';
-import { usePolling, useNow } from '../lib/usePolling';
+import { useMediaQuery, usePolling, useNow } from '../lib/usePolling';
 import { palette, teamVars } from '../lib/colors';
 import { countdown, formatLongDay, formatTime } from '../lib/format';
 import { TeamLogo } from './TeamLogo';
@@ -34,7 +34,13 @@ function WinProb({ points, top, bottom, topIsHome }) {
             {bottom.abbr} {Math.round((1 - last) * 100)}%
           </span>
         </div>
-        <svg viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="none" className="wp__svg" role="img" aria-label="Win probability over the game">
+        <svg
+          viewBox={`0 0 ${W} ${H}`}
+          preserveAspectRatio="none"
+          className="wp__svg"
+          role="img"
+          aria-label="Win probability over the game"
+        >
           <defs>
             <clipPath id="wp-top">
               <rect x="0" y="0" width={W} height={H / 2} />
@@ -223,8 +229,15 @@ function PreGame({ slot, records, now }) {
   );
 }
 
+// Desktop: a panel from the right. Phones (same breakpoint as the CSS): a
+// bottom sheet that can be swiped down from its handle. The close button sits
+// outside the scrolling area so it is always on screen and a tap on it never
+// lands on a scroller that is still coasting.
 export function GameDrawer({ slot, event, onClose }) {
   const now = useNow(1000);
+  const sheet = useMediaQuery('(max-width: 760px)');
+  const drag = useDragControls();
+  const hidden = sheet ? { y: '100%' } : { x: '100%' };
   const g = slot.game;
   const { data, error } = usePolling(`/api/game/${g.id}`, { intervalOf, fallbackMs: 60000 });
 
@@ -262,87 +275,104 @@ export function GameDrawer({ slot, event, onClose }) {
         role="dialog"
         aria-modal="true"
         aria-label={`${slot.title} game details`}
-        initial={{ x: '100%' }}
-        animate={{ x: 0 }}
-        exit={{ x: '100%' }}
+        initial={hidden}
+        animate={{ x: 0, y: 0 }}
+        exit={hidden}
         transition={{ type: 'spring', stiffness: 320, damping: 34 }}
+        drag={sheet ? 'y' : false}
+        dragListener={false}
+        dragControls={drag}
+        dragConstraints={{ top: 0, bottom: 0 }}
+        dragElastic={{ top: 0, bottom: 0.7 }}
+        onDragEnd={(_, info) => (info.offset.y > 100 || info.velocity.y > 500) && onClose()}
       >
-        <header
-          className="dhead"
-          style={{
-            '--ca': pa ? pa.primary : '#222',
-            '--cb': pb ? pb.primary : '#222',
-          }}
-        >
-          <button className="iconbtn dhead__close" onClick={onClose} aria-label="Close">
-            <X size={18} />
-          </button>
-          <div className="dhead__kicker">
-            {event.name} · {slot.title}
+        {sheet && (
+          <div className="drawer__grab" onPointerDown={(e) => drag.start(e)} aria-hidden="true">
+            <span />
           </div>
-          <div className="dhead__match">
-            {[a, b].map((s, i) => (
-              <div key={i} className={`dteam ${state === 'post' && !s.winner ? 'is-loser' : ''}`}>
-                {s.team ? <TeamLogo team={s.team} size={64} /> : <span className="logo logo--empty" style={{ width: 64, height: 64 }} />}
-                <span className="dteam__name">{s.team ? s.team.short : s.label}</span>
-                <span className="dteam__rec">{s.record || ''}</span>
+        )}
+        <button className="iconbtn drawer__close" onClick={onClose} aria-label="Close">
+          <X size={20} />
+        </button>
+        <div className="drawer__scroll">
+          <header
+            className="dhead"
+            style={{
+              '--ca': pa ? pa.primary : '#222',
+              '--cb': pb ? pb.primary : '#222',
+            }}
+          >
+            <div className="dhead__kicker">
+              {event.name} · {slot.title}
+            </div>
+            <div className="dhead__match">
+              {[a, b].map((s, i) => (
+                <div key={i} className={`dteam ${state === 'post' && !s.winner ? 'is-loser' : ''}`}>
+                  {s.team ? (
+                    <TeamLogo team={s.team} size={64} />
+                  ) : (
+                    <span className="logo logo--empty" style={{ width: 64, height: 64 }} />
+                  )}
+                  <span className="dteam__name">{s.team ? s.team.short : s.label}</span>
+                  <span className="dteam__rec">{s.record || ''}</span>
+                </div>
+              ))}
+              <div className="dhead__score">
+                {state === 'pre' ? (
+                  <span className="dhead__vs">VS</span>
+                ) : (
+                  <span>
+                    {a.score ?? '–'}
+                    <i>–</i>
+                    {b.score ?? '–'}
+                  </span>
+                )}
+                <StatusChip game={status} />
               </div>
-            ))}
-            <div className="dhead__score">
-              {state === 'pre' ? (
-                <span className="dhead__vs">VS</span>
-              ) : (
-                <span>
-                  {a.score ?? '–'}
-                  <i>–</i>
-                  {b.score ?? '–'}
-                </span>
-              )}
-              <StatusChip game={status} />
             </div>
-          </div>
-        </header>
+          </header>
 
-        <div className="dbody">
-          {error && !data && <p className="notice">Couldn’t load game details: {error}</p>}
-          {state === 'pre' && <PreGame slot={slot} records={event.records} now={now} />}
-          {teams && state !== 'pre' && <LineScore teams={teams} />}
-          {data && a.team && b.team && (
-            <WinProb points={data.winProb} top={a.team} bottom={b.team} topIsHome={a.homeAway === 'home'} />
-          )}
-          {teams && state !== 'pre' && <StatCompare a={teams[0]} b={teams[1]} />}
-          {teams && <Leaders teams={teams} />}
+          <div className="dbody">
+            {error && !data && <p className="notice">Couldn’t load game details: {error}</p>}
+            {state === 'pre' && <PreGame slot={slot} records={event.records} now={now} />}
+            {teams && state !== 'pre' && <LineScore teams={teams} />}
+            {data && a.team && b.team && (
+              <WinProb points={data.winProb} top={a.team} bottom={b.team} topIsHome={a.homeAway === 'home'} />
+            )}
+            {teams && state !== 'pre' && <StatCompare a={teams[0]} b={teams[1]} />}
+            {teams && <Leaders teams={teams} />}
 
-          <section className="dsec info">
-            <div>
-              <MapPin size={15} />
-              {(data && data.venue) || (g.venue && g.venue.name)} · Las Vegas
-            </div>
-            <div>
-              <Tv size={15} />
-              {(data && data.broadcast) || g.broadcast || 'TBA'} · {formatLongDay(g.date)}, {formatTime(g.date)}
-            </div>
-            {data && data.attendance && (
+            <section className="dsec info">
               <div>
-                <Users size={15} />
-                {data.attendance.toLocaleString()} in attendance
+                <MapPin size={15} />
+                {(data && data.venue) || (g.venue && g.venue.name)} · Las Vegas
               </div>
-            )}
-            {state === 'pre' && odds && odds.details && (
-              <div className="info__odds">
-                Line: {odds.details}
-                {odds.overUnder ? ` · O/U ${odds.overUnder}` : ''}
+              <div>
+                <Tv size={15} />
+                {(data && data.broadcast) || g.broadcast || 'TBA'} · {formatLongDay(g.date)}, {formatTime(g.date)}
               </div>
-            )}
-            <a
-              className="info__link"
-              href={`https://www.espn.com/mens-college-basketball/game/_/gameId/${g.id}`}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Full game on ESPN <ExternalLink size={14} />
-            </a>
-          </section>
+              {data && data.attendance && (
+                <div>
+                  <Users size={15} />
+                  {data.attendance.toLocaleString()} in attendance
+                </div>
+              )}
+              {state === 'pre' && odds && odds.details && (
+                <div className="info__odds">
+                  Line: {odds.details}
+                  {odds.overUnder ? ` · O/U ${odds.overUnder}` : ''}
+                </div>
+              )}
+              <a
+                className="info__link"
+                href={`https://www.espn.com/mens-college-basketball/game/_/gameId/${g.id}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Full game on ESPN <ExternalLink size={14} />
+              </a>
+            </section>
+          </div>
         </div>
       </motion.aside>
     </motion.div>

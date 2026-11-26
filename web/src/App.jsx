@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import confetti from 'canvas-confetti';
 import { CalendarDays, GitFork, Users } from 'lucide-react';
-import { useLocalStorage, useNow, usePolling } from './lib/usePolling';
+import { useLocalStorage, usePolling } from './lib/usePolling';
 import { findTeam, gameSlots, hasTeam } from './lib/bracket';
 import { palette } from './lib/colors';
 import { TopBar } from './components/TopBar';
@@ -13,6 +13,7 @@ import { Schedule } from './components/Schedule';
 import { Teams } from './components/Teams';
 import { GameDrawer } from './components/GameDrawer';
 import { Toasts } from './components/Toasts';
+import { Seg } from './components/Seg';
 
 const VIEWS = [
   { key: 'bracket', label: 'Bracket', icon: GitFork },
@@ -55,7 +56,12 @@ function useChangeFeed(data, favoriteId, push) {
     for (const event of data.events) {
       champs.set(event.key, event.champion ? event.champion.id : null);
       for (const slot of gameSlots(event)) {
-        snap.set(slot.game.id, { state: slot.game.status.state, score: slot.sides.map((s) => s.score).join('-'), slot, event });
+        snap.set(slot.game.id, {
+          state: slot.game.status.state,
+          score: slot.sides.map((s) => s.score).join('-'),
+          slot,
+          event,
+        });
       }
     }
     const before = prev.current;
@@ -79,6 +85,8 @@ function useChangeFeed(data, favoriteId, push) {
   }, [data, favoriteId, push]);
 }
 
+// Also saved so main.jsx can repaint the last theme before the first fetch
+// lands, instead of flashing the default colors on every reload.
 function applyTheme(team) {
   const p = palette(team) || DEFAULT_THEME;
   const root = document.documentElement.style;
@@ -86,6 +94,12 @@ function applyTheme(team) {
   root.setProperty('--accent', p.accent);
   root.setProperty('--accent-2', p.accent2);
   document.querySelector('meta[name="theme-color"]')?.setAttribute('content', team ? p.primary : '#07080d');
+  try {
+    if (team) localStorage.setItem('pe.theme', JSON.stringify(p));
+    else localStorage.removeItem('pe.theme');
+  } catch {
+    /* storage unavailable */
+  }
 }
 
 function Skeleton() {
@@ -103,10 +117,13 @@ function Skeleton() {
 }
 
 export default function App() {
-  const [paused, setPaused] = useState(false);
-  const poll = usePolling('/api/tournament', { paused });
+  // 'auto' follows the server's suggested rate, a number pins it (ms), 'off' pauses.
+  const [rate, setRate] = useLocalStorage('pe.rate', 'auto');
+  const poll = usePolling('/api/tournament', {
+    paused: rate === 'off',
+    intervalMs: typeof rate === 'number' ? rate : null,
+  });
   const data = poll.data;
-  const now = useNow(1000);
 
   const [eventKey, setEventKey] = useLocalStorage('pe.event', null);
   const [view, setView] = useLocalStorage('pe.view', 'bracket');
@@ -117,11 +134,7 @@ export default function App() {
 
   const event = useMemo(() => {
     if (!data) return null;
-    return (
-      data.events.find((e) => e.key === eventKey) ||
-      data.events.find((e) => e.counts.live > 0) ||
-      data.events[0]
-    );
+    return data.events.find((e) => e.key === eventKey) || data.events.find((e) => e.counts.live > 0) || data.events[0];
   }, [data, eventKey]);
 
   const allTeams = useMemo(() => {
@@ -139,7 +152,9 @@ export default function App() {
     const q = new URLSearchParams(window.location.search);
     const team = q.get('team');
     if (team) {
-      const t = data.events.flatMap((e) => e.teams).find((x) => x.id === team || x.abbr.toLowerCase() === team.toLowerCase());
+      const t = data.events
+        .flatMap((e) => e.teams)
+        .find((x) => x.id === team || x.abbr.toLowerCase() === team.toLowerCase());
       if (t) setFavorite(t.id);
     }
     const ev = data.events.find((e) => e.key === q.get('event'));
@@ -155,7 +170,11 @@ export default function App() {
   }, [data, setFavorite, setEventKey, setView]);
 
   const favoriteTeam = findTeam(data, favorite);
-  useEffect(() => applyTheme(favoriteTeam), [favoriteTeam]);
+  // Wait for data before theming: before the first fetch, favoriteTeam is
+  // unknown, and resetting to defaults would undo the boot theme.
+  useEffect(() => {
+    if (data) applyTheme(favoriteTeam);
+  }, [data, favoriteTeam]);
   useChangeFeed(data, favorite, push);
 
   // Re-resolve the open game from the latest poll so the drawer stays live.
@@ -179,7 +198,12 @@ export default function App() {
       <div className="backdrop" aria-hidden="true">
         <div className="backdrop__glow" />
         {favoriteTeam && (
-          <img key={favoriteTeam.id} className="backdrop__logo" src={favoriteTeam.logoDark || favoriteTeam.logo} alt="" />
+          <img
+            key={favoriteTeam.id}
+            className="backdrop__logo"
+            src={favoriteTeam.logoDark || favoriteTeam.logo}
+            alt=""
+          />
         )}
         <div className="backdrop__grid" />
       </div>
@@ -190,9 +214,8 @@ export default function App() {
         setFavorite={setFavorite}
         poll={poll}
         mode={data ? data.mode : null}
-        paused={paused}
-        setPaused={setPaused}
-        now={now}
+        rate={rate}
+        setRate={setRate}
       />
       {data && <Ticker data={data} onOpen={onOpen} />}
 
@@ -211,49 +234,37 @@ export default function App() {
         {data && event && (
           <>
             {data.stale && <p className="notice">ESPN isn’t responding — showing the last scores we got.</p>}
-            <Hero
-              data={data}
-              event={event}
-              favoriteTeam={favoriteTeam}
-              now={now}
-              onOpen={onOpen}
-              onCelebrate={celebrate}
-            />
+            <Hero data={data} event={event} favoriteTeam={favoriteTeam} onOpen={onOpen} onCelebrate={celebrate} />
 
             <nav className="tabsbar">
-              <div className="seg" role="tablist" aria-label="Tournament">
-                {data.events.map((e) => (
-                  <button
-                    key={e.key}
-                    role="tab"
-                    aria-selected={e.key === event.key}
-                    className={`seg__btn ${e.key === event.key ? 'is-on' : ''}`}
-                    onClick={() => setEventKey(e.key)}
-                  >
-                    {e.key === event.key && <motion.span layoutId="seg-event" className="seg__pill" />}
-                    <span className="seg__label">
+              <Seg
+                label="Tournament"
+                value={event.key}
+                onChange={setEventKey}
+                items={data.events.map((e) => ({
+                  key: e.key,
+                  label: (
+                    <>
                       {e.name}
                       {e.counts.live > 0 && <span className="pulse-dot" />}
-                    </span>
-                  </button>
-                ))}
-              </div>
-              <div className="seg seg--views" role="tablist" aria-label="View">
-                {VIEWS.map(({ key, label, icon: Icon }) => (
-                  <button
-                    key={key}
-                    role="tab"
-                    aria-selected={view === key}
-                    className={`seg__btn ${view === key ? 'is-on' : ''}`}
-                    onClick={() => setView(key)}
-                  >
-                    {view === key && <motion.span layoutId="seg-view" className="seg__pill" />}
-                    <span className="seg__label">
+                    </>
+                  ),
+                }))}
+              />
+              <Seg
+                label="View"
+                className="seg--views"
+                value={view}
+                onChange={setView}
+                items={VIEWS.map(({ key, label, icon: Icon }) => ({
+                  key,
+                  label: (
+                    <>
                       <Icon size={15} /> {label}
-                    </span>
-                  </button>
-                ))}
-              </div>
+                    </>
+                  ),
+                }))}
+              />
             </nav>
 
             <AnimatePresence mode="wait">
@@ -276,10 +287,18 @@ export default function App() {
       <footer className="foot">
         Unofficial fan site. Scores, logos and colors from ESPN’s public scoreboard API — not affiliated with Players
         Era, ESPN, MGM Resorts or any school. Times shown in your time zone.
+        <span className="foot__credit">
+          Built with{' '}
+          <a href="https://claude.com/claude-code" target="_blank" rel="noreferrer">
+            Claude Code
+          </a>
+        </span>
       </footer>
 
       <AnimatePresence>
-        {openSlot && <GameDrawer key={openSlot.slot.id} slot={openSlot.slot} event={openSlot.event} onClose={closeDrawer} />}
+        {openSlot && (
+          <GameDrawer key={openSlot.slot.id} slot={openSlot.slot} event={openSlot.event} onClose={closeDrawer} />
+        )}
       </AnimatePresence>
       <Toasts toasts={toasts} dismiss={dismiss} onOpen={onOpen} />
     </div>

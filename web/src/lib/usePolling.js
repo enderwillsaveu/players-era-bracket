@@ -10,15 +10,20 @@ async function getJson(url) {
 }
 
 // Polls `url` on an interval the server suggests (`pollMs` in the response, or
-// `fallbackMs`). Stops while the tab is hidden or `paused`, refetches when
-// the tab becomes visible again, and backs off exponentially on errors.
-export function usePolling(url, { fallbackMs = 30000, paused = false, intervalOf } = {}) {
+// `fallbackMs`), unless `intervalMs` pins a fixed rate. Stops while the tab is
+// hidden or `paused`, refetches when the tab becomes visible again, and backs
+// off exponentially on errors.
+export function usePolling(url, { fallbackMs = 30000, paused = false, intervalOf, intervalMs = null } = {}) {
   const [state, setState] = useState({ data: null, error: null, updatedAt: null, loading: Boolean(url) });
   const [nextAt, setNextAt] = useState(null);
+  const [delayMs, setDelayMs] = useState(null);
   const timer = useRef(null);
   const failures = useRef(0);
-  const interval = useRef(fallbackMs);
+  const suggested = useRef(fallbackMs);
   const inflight = useRef(false);
+  const override = useRef(intervalMs);
+  override.current = intervalMs;
+  const currentInterval = () => override.current || suggested.current;
 
   const load = useCallback(async () => {
     if (!url || inflight.current) return;
@@ -27,7 +32,7 @@ export function usePolling(url, { fallbackMs = 30000, paused = false, intervalOf
     try {
       const data = await getJson(url);
       failures.current = 0;
-      interval.current = (intervalOf && intervalOf(data)) || data.pollMs || fallbackMs;
+      suggested.current = (intervalOf && intervalOf(data)) || data.pollMs || fallbackMs;
       setState({ data, error: null, updatedAt: Date.now(), loading: false });
     } catch (err) {
       failures.current += 1;
@@ -43,10 +48,10 @@ export function usePolling(url, { fallbackMs = 30000, paused = false, intervalOf
       setNextAt(null);
       return;
     }
-    const delay = failures.current
-      ? Math.min(interval.current * 2 ** failures.current, MAX_BACKOFF)
-      : interval.current;
+    const base = currentInterval();
+    const delay = failures.current ? Math.min(base * 2 ** failures.current, MAX_BACKOFF) : base;
     setNextAt(Date.now() + delay);
+    setDelayMs(delay);
     timer.current = setTimeout(async () => {
       await load();
       schedule();
@@ -62,16 +67,23 @@ export function usePolling(url, { fallbackMs = 30000, paused = false, intervalOf
   useEffect(() => {
     setState({ data: null, error: null, updatedAt: null, loading: Boolean(url) });
     failures.current = 0;
-    interval.current = fallbackMs;
+    suggested.current = fallbackMs;
     refresh();
     return () => clearTimeout(timer.current);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [url]);
 
+  // Reschedule when paused/resumed or the chosen rate changes. Skip the
+  // initial run: the url effect above already loaded and scheduled.
+  const mounted = useRef(false);
   useEffect(() => {
+    if (!mounted.current) {
+      mounted.current = true;
+      return undefined;
+    }
     schedule();
     return () => clearTimeout(timer.current);
-  }, [paused, schedule]);
+  }, [paused, intervalMs, schedule]);
 
   useEffect(() => {
     const onVis = () => (document.hidden ? schedule() : refresh());
@@ -79,7 +91,9 @@ export function usePolling(url, { fallbackMs = 30000, paused = false, intervalOf
     return () => document.removeEventListener('visibilitychange', onVis);
   }, [refresh, schedule]);
 
-  return { ...state, nextAt, refresh, interval: interval.current };
+  // interval: the rate in use (ignoring error backoff). delayMs: the wait
+  // before the pending fetch (with backoff). suggestedMs: the server's rate.
+  return { ...state, nextAt, delayMs, refresh, interval: currentInterval(), suggestedMs: suggested.current };
 }
 
 export function useNow(everyMs = 1000) {
@@ -109,4 +123,16 @@ export function useLocalStorage(key, initial) {
     }
   }, [key, value]);
   return [value, setValue];
+}
+
+export function useMediaQuery(query) {
+  const [match, setMatch] = useState(() => window.matchMedia(query).matches);
+  useEffect(() => {
+    const mq = window.matchMedia(query);
+    const on = () => setMatch(mq.matches);
+    on();
+    mq.addEventListener('change', on);
+    return () => mq.removeEventListener('change', on);
+  }, [query]);
+  return match;
 }

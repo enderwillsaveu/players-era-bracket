@@ -4,6 +4,7 @@ import { gameSlots, byTip, placementOf, teamPath } from '../lib/bracket';
 import { countdown, formatDay, formatTime, ordinal, shortVenue, vegasRange } from '../lib/format';
 import { teamVars } from '../lib/colors';
 import { TeamLogo } from './TeamLogo';
+import { useNow } from '../lib/usePolling';
 import { StatusChip } from './GameCard';
 
 function Matchup({ slot }) {
@@ -21,7 +22,9 @@ function Matchup({ slot }) {
   );
 }
 
-function NowPanel({ event, now, onOpen }) {
+// Owns the 1s clock for the countdown so only this panel re-renders each tick.
+function NowPanel({ event, onOpen }) {
+  const now = useNow(1000);
   const slots = gameSlots(event);
   const live = slots.filter((s) => s.game.status.state === 'in').sort(byTip);
   const next = slots.filter((s) => s.game.status.state === 'pre').sort(byTip)[0];
@@ -80,7 +83,9 @@ function YourTeam({ event, team, onOpen }) {
     <div className="yours" style={teamVars(team)}>
       <TeamLogo team={team} size={44} />
       <div className="yours__body">
-        <span className="yours__kicker">Your team · {rec.w}-{rec.l} in Vegas</span>
+        <span className="yours__kicker">
+          Your team · {rec.w}-{rec.l} in Vegas
+        </span>
         <strong>{team.short}</strong>
         <span className="yours__line">
           {place
@@ -115,7 +120,7 @@ function YourTeam({ event, team, onOpen }) {
   );
 }
 
-export function Hero({ data, event, favoriteTeam, now, onOpen, onCelebrate }) {
+export function Hero({ data, event, favoriteTeam, onOpen, onCelebrate }) {
   const [main, num] = event.name.match(/^(.*?)\s*(\d+)?$/).slice(1);
   const two = event.brackets.length > 1;
   return (
@@ -127,7 +132,8 @@ export function Hero({ data, event, favoriteTeam, now, onOpen, onCelebrate }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.05 }}
         >
-          <MapPin size={13} /> {data.location} · {vegasRange(event.start, event.end)}, {new Date(event.start).getFullYear()}
+          <MapPin size={13} /> {data.location} · {vegasRange(event.start, event.end)},{' '}
+          {new Date(event.start).getFullYear()}
         </motion.div>
         <motion.h1
           className="hero__title"
@@ -158,7 +164,6 @@ export function Hero({ data, event, favoriteTeam, now, onOpen, onCelebrate }) {
             onClick={() => onCelebrate(event.champion)}
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
-            whileHover={{ y: -2 }}
             title="Celebrate"
           >
             <TeamLogo team={event.champion} size={52} />
@@ -178,7 +183,7 @@ export function Hero({ data, event, favoriteTeam, now, onOpen, onCelebrate }) {
       </div>
       <div className="hero__right">
         {favoriteTeam && <YourTeam event={event} team={favoriteTeam} onOpen={onOpen} />}
-        <NowPanel event={event} now={now} onOpen={onOpen} />
+        <NowPanel event={event} onOpen={onOpen} />
       </div>
     </section>
   );

@@ -34,8 +34,8 @@ export function Teams({ event, focus, setFavorite, onOpen }) {
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: Math.min(i * 0.03, 0.4) }}
-          onMouseEnter={() => focus.onHoverTeam(team.id)}
-          onMouseLeave={() => focus.onHoverTeam(null)}
+          onPointerEnter={(e) => e.pointerType === 'mouse' && focus.onHoverTeam(team.id)}
+          onPointerLeave={(e) => e.pointerType === 'mouse' && focus.onHoverTeam(null)}
         >
           <div className="tcard__bg">
             <TeamLogo team={team} size={180} />

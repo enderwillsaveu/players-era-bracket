@@ -76,8 +76,10 @@ function TeamRow({ side, anchor, state, focus }) {
       )}
       style={teamVars(t)}
       data-anchor={anchor}
-      onMouseEnter={() => focus.onHoverTeam(t.id)}
-      onMouseLeave={() => focus.onHoverTeam(null)}
+      // Mouse only: a tap fires mouseenter with no matching leave, which
+      // would leave every other card dimmed on phones.
+      onPointerEnter={(e) => e.pointerType === 'mouse' && focus.onHoverTeam(t.id)}
+      onPointerLeave={(e) => e.pointerType === 'mouse' && focus.onHoverTeam(null)}
     >
       <span className="row__bar" />
       <TeamLogo team={t} size={24} />
@@ -109,7 +111,9 @@ export function GameCard({ slot, focus, onOpen, variant = 'default', label }) {
       data-card={slot.id}
       role={g ? 'button' : undefined}
       tabIndex={g ? 0 : undefined}
-      aria-label={g ? `${slot.title}: ${slot.sides.map((s) => (s.team ? s.team.short : s.label)).join(' vs ')}` : undefined}
+      aria-label={
+        g ? `${slot.title}: ${slot.sides.map((s) => (s.team ? s.team.short : s.label)).join(' vs ')}` : undefined
+      }
       onClick={open}
       onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && (e.preventDefault(), open())}
     >

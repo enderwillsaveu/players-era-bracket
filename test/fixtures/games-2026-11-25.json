@@ -1,0 +1,2318 @@
+[
+ {
+  "id": "401915942",
+  "date": "2026-11-25T01:37Z",
+  "event": "Players Era 16",
+  "label": null,
+  "kind": "round",
+  "venue": {
+   "id": "4005",
+   "name": "Michelob ULTRA Arena"
+  },
+  "status": {
+   "state": "post",
+   "name": "STATUS_FINAL",
+   "completed": true,
+   "detail": "Final",
+   "shortDetail": "Final",
+   "clock": "0:00",
+   "period": 2
+  },
+  "broadcast": "ESPN",
+  "odds": null,
+  "competitors": [
+   {
+    "team": {
+     "id": "97",
+     "abbr": "LOU",
+     "name": "Louisville Cardinals",
+     "short": "Louisville",
+     "location": "Louisville",
+     "mascot": "Cardinals",
+     "color": "#c9001f",
+     "alt": "#ffffff",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/97.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/97.png"
+    },
+    "homeAway": "home",
+    "score": 72,
+    "winner": true,
+    "rank": 25,
+    "record": "4-1",
+    "linescores": [
+     26,
+     46
+    ]
+   },
+   {
+    "team": {
+     "id": "2641",
+     "abbr": "TTU",
+     "name": "Texas Tech Red Raiders",
+     "short": "Texas Tech",
+     "location": "Texas Tech",
+     "mascot": "Red Raiders",
+     "color": "#da291c",
+     "alt": "#000000",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2641.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2641.png"
+    },
+    "homeAway": "away",
+    "score": 64,
+    "winner": false,
+    "rank": 5,
+    "record": "5-1",
+    "linescores": [
+     25,
+     39
+    ]
+   }
+  ]
+ },
+ {
+  "id": "401906853",
+  "date": "2026-11-24T20:00Z",
+  "event": "Players Era 16",
+  "label": null,
+  "kind": "round",
+  "venue": {
+   "id": "4005",
+   "name": "Michelob ULTRA Arena"
+  },
+  "status": {
+   "state": "post",
+   "name": "STATUS_FINAL",
+   "completed": true,
+   "detail": "Final",
+   "shortDetail": "Final",
+   "clock": "0:00",
+   "period": 2
+  },
+  "broadcast": "ESPN",
+  "odds": null,
+  "competitors": [
+   {
+    "team": {
+     "id": "120",
+     "abbr": "MD",
+     "name": "Maryland Terrapins",
+     "short": "Maryland",
+     "location": "Maryland",
+     "mascot": "Terrapins",
+     "color": "#ce1126",
+     "alt": "#ffffff",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/120.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/120.png"
+    },
+    "homeAway": "home",
+    "score": 64,
+    "winner": false,
+    "rank": null,
+    "record": "3-3",
+    "linescores": [
+     34,
+     30
+    ]
+   },
+   {
+    "team": {
+     "id": "2633",
+     "abbr": "TENN",
+     "name": "Tennessee Volunteers",
+     "short": "Tennessee",
+     "location": "Tennessee",
+     "mascot": "Volunteers",
+     "color": "#ff8200",
+     "alt": "#ffffff",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2633.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2633.png"
+    },
+    "homeAway": "away",
+    "score": 72,
+    "winner": true,
+    "rank": 9,
+    "record": "6-0",
+    "linescores": [
+     36,
+     36
+    ]
+   }
+  ]
+ },
+ {
+  "id": "401915943",
+  "date": "2026-11-25T04:18Z",
+  "event": "Players Era 16",
+  "label": null,
+  "kind": "round",
+  "venue": {
+   "id": "4005",
+   "name": "Michelob ULTRA Arena"
+  },
+  "status": {
+   "state": "post",
+   "name": "STATUS_FINAL",
+   "completed": true,
+   "detail": "Final",
+   "shortDetail": "Final",
+   "clock": "0:00",
+   "period": 2
+  },
+  "broadcast": "ESPN",
+  "odds": null,
+  "competitors": [
+   {
+    "team": {
+     "id": "2599",
+     "abbr": "SJU",
+     "name": "St. John's Red Storm",
+     "short": "St John's",
+     "location": "St. John's",
+     "mascot": "Red Storm",
+     "color": "#d10000",
+     "alt": "#101010",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2599.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2599.png"
+    },
+    "homeAway": "home",
+    "score": 90,
+    "winner": true,
+    "rank": 13,
+    "record": "6-0",
+    "linescores": [
+     45,
+     45
+    ]
+   },
+   {
+    "team": {
+     "id": "2483",
+     "abbr": "ORE",
+     "name": "Oregon Ducks",
+     "short": "Oregon",
+     "location": "Oregon",
+     "mascot": "Ducks",
+     "color": "#00934b",
+     "alt": "#fff41b",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2483.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2483.png"
+    },
+    "homeAway": "away",
+    "score": 79,
+    "winner": false,
+    "rank": null,
+    "record": "3-2",
+    "linescores": [
+     30,
+     49
+    ]
+   }
+  ]
+ },
+ {
+  "id": "401906762",
+  "date": "2026-11-25T03:05Z",
+  "event": "Players Era 16",
+  "label": null,
+  "kind": "round",
+  "venue": {
+   "id": "5060",
+   "name": "T-Mobile Arena"
+  },
+  "status": {
+   "state": "post",
+   "name": "STATUS_FINAL",
+   "completed": true,
+   "detail": "Final",
+   "shortDetail": "Final",
+   "clock": "0:00",
+   "period": 2
+  },
+  "broadcast": "ESPN2",
+  "odds": null,
+  "competitors": [
+   {
+    "team": {
+     "id": "333",
+     "abbr": "ALA",
+     "name": "Alabama Crimson Tide",
+     "short": "Alabama",
+     "location": "Alabama",
+     "mascot": "Crimson Tide",
+     "color": "#9e1b32",
+     "alt": "#ffffff",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/333.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/333.png"
+    },
+    "homeAway": "home",
+    "score": 63,
+    "winner": false,
+    "rank": 15,
+    "record": "5-1",
+    "linescores": [
+     24,
+     39
+    ]
+   },
+   {
+    "team": {
+     "id": "239",
+     "abbr": "BAY",
+     "name": "Baylor Bears",
+     "short": "Baylor",
+     "location": "Baylor",
+     "mascot": "Bears",
+     "color": "#154734",
+     "alt": "#ffb81c",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/239.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/239.png"
+    },
+    "homeAway": "away",
+    "score": 68,
+    "winner": true,
+    "rank": null,
+    "record": "5-1",
+    "linescores": [
+     29,
+     39
+    ]
+   }
+  ]
+ },
+ {
+  "id": "401915941",
+  "date": "2026-11-24T20:00Z",
+  "event": "Players Era 16",
+  "label": null,
+  "kind": "round",
+  "venue": {
+   "id": "5060",
+   "name": "T-Mobile Arena"
+  },
+  "status": {
+   "state": "post",
+   "name": "STATUS_FINAL",
+   "completed": true,
+   "detail": "Final",
+   "shortDetail": "Final",
+   "clock": "0:00",
+   "period": 2
+  },
+  "broadcast": "ESPNU",
+  "odds": null,
+  "competitors": [
+   {
+    "team": {
+     "id": "2628",
+     "abbr": "TCU",
+     "name": "TCU Horned Frogs",
+     "short": "TCU",
+     "location": "TCU",
+     "mascot": "Horned Frogs",
+     "color": "#4d1979",
+     "alt": "#ffffff",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2628.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2628.png"
+    },
+    "homeAway": "home",
+    "score": 84,
+    "winner": true,
+    "rank": null,
+    "record": "5-1",
+    "linescores": [
+     37,
+     47
+    ]
+   },
+   {
+    "team": {
+     "id": "2390",
+     "abbr": "MIA",
+     "name": "Miami Hurricanes",
+     "short": "Miami",
+     "location": "Miami",
+     "mascot": "Hurricanes",
+     "color": "#f47423",
+     "alt": "#035131",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2390.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2390.png"
+    },
+    "homeAway": "away",
+    "score": 71,
+    "winner": false,
+    "rank": 17,
+    "record": "5-2",
+    "linescores": [
+     37,
+     34
+    ]
+   }
+  ]
+ },
+ {
+  "id": "401909800",
+  "date": "2026-11-25T05:49Z",
+  "event": "Players Era 16",
+  "label": null,
+  "kind": "round",
+  "venue": {
+   "id": "5060",
+   "name": "T-Mobile Arena"
+  },
+  "status": {
+   "state": "post",
+   "name": "STATUS_FINAL",
+   "completed": true,
+   "detail": "Final",
+   "shortDetail": "Final",
+   "clock": "0:00",
+   "period": 2
+  },
+  "broadcast": "ESPN",
+  "odds": null,
+  "competitors": [
+   {
+    "team": {
+     "id": "2306",
+     "abbr": "KSU",
+     "name": "Kansas State Wildcats",
+     "short": "Kansas St",
+     "location": "Kansas State",
+     "mascot": "Wildcats",
+     "color": "#330a57",
+     "alt": "#e2e3e4",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2306.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2306.png"
+    },
+    "homeAway": "home",
+    "score": 61,
+    "winner": false,
+    "rank": null,
+    "record": "3-3",
+    "linescores": [
+     31,
+     30
+    ]
+   },
+   {
+    "team": {
+     "id": "2250",
+     "abbr": "GONZ",
+     "name": "Gonzaga Bulldogs",
+     "short": "Gonzaga",
+     "location": "Gonzaga",
+     "mascot": "Bulldogs",
+     "color": "#041e42",
+     "alt": "#c8102e",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2250.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2250.png"
+    },
+    "homeAway": "away",
+    "score": 101,
+    "winner": true,
+    "rank": 22,
+    "record": "4-1",
+    "linescores": [
+     58,
+     43
+    ]
+   }
+  ]
+ },
+ {
+  "id": "401909775",
+  "date": "2026-11-24T22:30Z",
+  "event": "Players Era 16",
+  "label": null,
+  "kind": "round",
+  "venue": {
+   "id": "4005",
+   "name": "Michelob ULTRA Arena"
+  },
+  "status": {
+   "state": "post",
+   "name": "STATUS_FINAL",
+   "completed": true,
+   "detail": "Final",
+   "shortDetail": "Final",
+   "clock": "0:00",
+   "period": 2
+  },
+  "broadcast": "ESPNU",
+  "odds": null,
+  "competitors": [
+   {
+    "team": {
+     "id": "66",
+     "abbr": "ISU",
+     "name": "Iowa State Cyclones",
+     "short": "Iowa State",
+     "location": "Iowa State",
+     "mascot": "Cyclones",
+     "color": "#ae192d",
+     "alt": "#ffc72a",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/66.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/66.png"
+    },
+    "homeAway": "home",
+    "score": 81,
+    "winner": true,
+    "rank": null,
+    "record": "4-1",
+    "linescores": [
+     41,
+     40
+    ]
+   },
+   {
+    "team": {
+     "id": "21",
+     "abbr": "SDSU",
+     "name": "San Diego State Aztecs",
+     "short": "San Diego St",
+     "location": "San Diego State",
+     "mascot": "Aztecs",
+     "color": "#a6192e",
+     "alt": "#000000",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/21.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/21.png"
+    },
+    "homeAway": "away",
+    "score": 68,
+    "winner": false,
+    "rank": null,
+    "record": "5-1",
+    "linescores": [
+     34,
+     34
+    ]
+   }
+  ]
+ },
+ {
+  "id": "401909495",
+  "date": "2026-11-24T22:55Z",
+  "event": "Players Era 16",
+  "label": null,
+  "kind": "round",
+  "venue": {
+   "id": "5060",
+   "name": "T-Mobile Arena"
+  },
+  "status": {
+   "state": "post",
+   "name": "STATUS_FINAL",
+   "completed": true,
+   "detail": "Final",
+   "shortDetail": "Final",
+   "clock": "0:00",
+   "period": 2
+  },
+  "broadcast": "ESPN",
+  "odds": null,
+  "competitors": [
+   {
+    "team": {
+     "id": "130",
+     "abbr": "MICH",
+     "name": "Michigan Wolverines",
+     "short": "Michigan",
+     "location": "Michigan",
+     "mascot": "Wolverines",
+     "color": "#00274c",
+     "alt": "#ffcb05",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/130.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/130.png"
+    },
+    "homeAway": "home",
+    "score": 73,
+    "winner": false,
+    "rank": null,
+    "record": "3-3",
+    "linescores": [
+     38,
+     35
+    ]
+   },
+   {
+    "team": {
+     "id": "156",
+     "abbr": "CREI",
+     "name": "Creighton Bluejays",
+     "short": "Creighton",
+     "location": "Creighton",
+     "mascot": "Bluejays",
+     "color": "#005ca9",
+     "alt": "#6cadde",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/156.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/156.png"
+    },
+    "homeAway": "away",
+    "score": 99,
+    "winner": true,
+    "rank": null,
+    "record": "5-1",
+    "linescores": [
+     59,
+     40
+    ]
+   }
+  ]
+ },
+ {
+  "id": "401920528",
+  "date": "2026-11-26T18:00Z",
+  "event": "Players Era 16",
+  "label": null,
+  "kind": "round",
+  "venue": {
+   "id": "4005",
+   "name": "Michelob ULTRA Arena"
+  },
+  "status": {
+   "state": "pre",
+   "name": "STATUS_SCHEDULED",
+   "completed": false,
+   "detail": "Thu, November 26th at 1:00 PM EST",
+   "shortDetail": "11/26 - 1:00 PM EST",
+   "clock": "0:00",
+   "period": 0
+  },
+  "broadcast": "ESPN",
+  "odds": {
+   "details": "MD -4.5",
+   "overUnder": 153.5
+  },
+  "competitors": [
+   {
+    "team": {
+     "id": "120",
+     "abbr": "MD",
+     "name": "Maryland Terrapins",
+     "short": "Maryland",
+     "location": "Maryland",
+     "mascot": "Terrapins",
+     "color": "#ce1126",
+     "alt": "#ffffff",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/120.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/120.png"
+    },
+    "homeAway": "home",
+    "score": null,
+    "winner": false,
+    "rank": null,
+    "record": "3-3",
+    "linescores": []
+   },
+   {
+    "team": {
+     "id": "21",
+     "abbr": "SDSU",
+     "name": "San Diego State Aztecs",
+     "short": "San Diego St",
+     "location": "San Diego State",
+     "mascot": "Aztecs",
+     "color": "#a6192e",
+     "alt": "#000000",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/21.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/21.png"
+    },
+    "homeAway": "away",
+    "score": null,
+    "winner": false,
+    "rank": null,
+    "record": "5-1",
+    "linescores": []
+   }
+  ]
+ },
+ {
+  "id": "401920529",
+  "date": "2026-11-26T20:30Z",
+  "event": "Players Era 16",
+  "label": null,
+  "kind": "round",
+  "venue": {
+   "id": "4005",
+   "name": "Michelob ULTRA Arena"
+  },
+  "status": {
+   "state": "pre",
+   "name": "STATUS_SCHEDULED",
+   "completed": false,
+   "detail": "Thu, November 26th at 3:30 PM EST",
+   "shortDetail": "11/26 - 3:30 PM EST",
+   "clock": "0:00",
+   "period": 0
+  },
+  "broadcast": "ESPN",
+  "odds": {
+   "details": "ISU -2.5",
+   "overUnder": 139.5
+  },
+  "competitors": [
+   {
+    "team": {
+     "id": "66",
+     "abbr": "ISU",
+     "name": "Iowa State Cyclones",
+     "short": "Iowa State",
+     "location": "Iowa State",
+     "mascot": "Cyclones",
+     "color": "#ae192d",
+     "alt": "#ffc72a",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/66.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/66.png"
+    },
+    "homeAway": "home",
+    "score": null,
+    "winner": false,
+    "rank": null,
+    "record": "4-1",
+    "linescores": []
+   },
+   {
+    "team": {
+     "id": "2633",
+     "abbr": "TENN",
+     "name": "Tennessee Volunteers",
+     "short": "Tennessee",
+     "location": "Tennessee",
+     "mascot": "Volunteers",
+     "color": "#ff8200",
+     "alt": "#ffffff",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2633.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2633.png"
+    },
+    "homeAway": "away",
+    "score": null,
+    "winner": false,
+    "rank": 9,
+    "record": "6-0",
+    "linescores": []
+   }
+  ]
+ },
+ {
+  "id": "401920537",
+  "date": "2026-11-26T20:30Z",
+  "event": "Players Era 16",
+  "label": null,
+  "kind": "round",
+  "venue": {
+   "id": "5060",
+   "name": "T-Mobile Arena"
+  },
+  "status": {
+   "state": "pre",
+   "name": "STATUS_SCHEDULED",
+   "completed": false,
+   "detail": "Thu, November 26th at 3:30 PM EST",
+   "shortDetail": "11/26 - 3:30 PM EST",
+   "clock": "0:00",
+   "period": 0
+  },
+  "broadcast": "ESPN2",
+  "odds": {
+   "details": "MIA -2.5",
+   "overUnder": 160.5
+  },
+  "competitors": [
+   {
+    "team": {
+     "id": "130",
+     "abbr": "MICH",
+     "name": "Michigan Wolverines",
+     "short": "Michigan",
+     "location": "Michigan",
+     "mascot": "Wolverines",
+     "color": "#00274c",
+     "alt": "#ffcb05",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/130.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/130.png"
+    },
+    "homeAway": "home",
+    "score": null,
+    "winner": false,
+    "rank": null,
+    "record": "3-3",
+    "linescores": []
+   },
+   {
+    "team": {
+     "id": "2390",
+     "abbr": "MIA",
+     "name": "Miami Hurricanes",
+     "short": "Miami",
+     "location": "Miami",
+     "mascot": "Hurricanes",
+     "color": "#f47423",
+     "alt": "#035131",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2390.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2390.png"
+    },
+    "homeAway": "away",
+    "score": null,
+    "winner": false,
+    "rank": 17,
+    "record": "5-2",
+    "linescores": []
+   }
+  ]
+ },
+ {
+  "id": "401920538",
+  "date": "2026-11-26T23:00Z",
+  "event": "Players Era 16",
+  "label": null,
+  "kind": "round",
+  "venue": {
+   "id": "5060",
+   "name": "T-Mobile Arena"
+  },
+  "status": {
+   "state": "pre",
+   "name": "STATUS_SCHEDULED",
+   "completed": false,
+   "detail": "Thu, November 26th at 6:00 PM EST",
+   "shortDetail": "11/26 - 6:00 PM EST",
+   "clock": "0:00",
+   "period": 0
+  },
+  "broadcast": "ESPN",
+  "odds": {
+   "details": "TCU -1.5",
+   "overUnder": 155.5
+  },
+  "competitors": [
+   {
+    "team": {
+     "id": "156",
+     "abbr": "CREI",
+     "name": "Creighton Bluejays",
+     "short": "Creighton",
+     "location": "Creighton",
+     "mascot": "Bluejays",
+     "color": "#005ca9",
+     "alt": "#6cadde",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/156.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/156.png"
+    },
+    "homeAway": "home",
+    "score": null,
+    "winner": false,
+    "rank": null,
+    "record": "5-1",
+    "linescores": []
+   },
+   {
+    "team": {
+     "id": "2628",
+     "abbr": "TCU",
+     "name": "TCU Horned Frogs",
+     "short": "TCU",
+     "location": "TCU",
+     "mascot": "Horned Frogs",
+     "color": "#4d1979",
+     "alt": "#ffffff",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2628.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2628.png"
+    },
+    "homeAway": "away",
+    "score": null,
+    "winner": false,
+    "rank": null,
+    "record": "5-1",
+    "linescores": []
+   }
+  ]
+ },
+ {
+  "id": "401920530",
+  "date": "2026-11-27T02:00Z",
+  "event": "Players Era 16",
+  "label": null,
+  "kind": "round",
+  "venue": {
+   "id": "4005",
+   "name": "Michelob ULTRA Arena"
+  },
+  "status": {
+   "state": "pre",
+   "name": "STATUS_SCHEDULED",
+   "completed": false,
+   "detail": "Thu, November 26th at 9:00 PM EST",
+   "shortDetail": "11/26 - 9:00 PM EST",
+   "clock": "0:00",
+   "period": 0
+  },
+  "broadcast": "ESPN2",
+  "odds": {
+   "details": "SJU -2.5",
+   "overUnder": 157.5
+  },
+  "competitors": [
+   {
+    "team": {
+     "id": "2599",
+     "abbr": "SJU",
+     "name": "St. John's Red Storm",
+     "short": "St John's",
+     "location": "St. John's",
+     "mascot": "Red Storm",
+     "color": "#d10000",
+     "alt": "#101010",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2599.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2599.png"
+    },
+    "homeAway": "home",
+    "score": null,
+    "winner": false,
+    "rank": 13,
+    "record": "6-0",
+    "linescores": []
+   },
+   {
+    "team": {
+     "id": "97",
+     "abbr": "LOU",
+     "name": "Louisville Cardinals",
+     "short": "Louisville",
+     "location": "Louisville",
+     "mascot": "Cardinals",
+     "color": "#c9001f",
+     "alt": "#ffffff",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/97.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/97.png"
+    },
+    "homeAway": "away",
+    "score": null,
+    "winner": false,
+    "rank": 25,
+    "record": "4-1",
+    "linescores": []
+   }
+  ]
+ },
+ {
+  "id": "401920539",
+  "date": "2026-11-27T02:00Z",
+  "event": "Players Era 16",
+  "label": null,
+  "kind": "round",
+  "venue": {
+   "id": "5060",
+   "name": "T-Mobile Arena"
+  },
+  "status": {
+   "state": "pre",
+   "name": "STATUS_SCHEDULED",
+   "completed": false,
+   "detail": "Thu, November 26th at 9:00 PM EST",
+   "shortDetail": "11/26 - 9:00 PM EST",
+   "clock": "0:00",
+   "period": 0
+  },
+  "broadcast": "ESPNU",
+  "odds": {
+   "details": "ALA -14.5",
+   "overUnder": 169.5
+  },
+  "competitors": [
+   {
+    "team": {
+     "id": "2306",
+     "abbr": "KSU",
+     "name": "Kansas State Wildcats",
+     "short": "Kansas St",
+     "location": "Kansas State",
+     "mascot": "Wildcats",
+     "color": "#330a57",
+     "alt": "#e2e3e4",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2306.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2306.png"
+    },
+    "homeAway": "home",
+    "score": null,
+    "winner": false,
+    "rank": null,
+    "record": "3-3",
+    "linescores": []
+   },
+   {
+    "team": {
+     "id": "333",
+     "abbr": "ALA",
+     "name": "Alabama Crimson Tide",
+     "short": "Alabama",
+     "location": "Alabama",
+     "mascot": "Crimson Tide",
+     "color": "#9e1b32",
+     "alt": "#ffffff",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/333.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/333.png"
+    },
+    "homeAway": "away",
+    "score": null,
+    "winner": false,
+    "rank": 15,
+    "record": "5-1",
+    "linescores": []
+   }
+  ]
+ },
+ {
+  "id": "401920531",
+  "date": "2026-11-27T04:30Z",
+  "event": "Players Era 16",
+  "label": null,
+  "kind": "round",
+  "venue": {
+   "id": "4005",
+   "name": "Michelob ULTRA Arena"
+  },
+  "status": {
+   "state": "pre",
+   "name": "STATUS_SCHEDULED",
+   "completed": false,
+   "detail": "Thu, November 26th at 11:30 PM EST",
+   "shortDetail": "11/26 - 11:30 PM EST",
+   "clock": "0:00",
+   "period": 0
+  },
+  "broadcast": "ESPN2",
+  "odds": {
+   "details": "TTU -9.5",
+   "overUnder": 150.5
+  },
+  "competitors": [
+   {
+    "team": {
+     "id": "2483",
+     "abbr": "ORE",
+     "name": "Oregon Ducks",
+     "short": "Oregon",
+     "location": "Oregon",
+     "mascot": "Ducks",
+     "color": "#00934b",
+     "alt": "#fff41b",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2483.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2483.png"
+    },
+    "homeAway": "home",
+    "score": null,
+    "winner": false,
+    "rank": null,
+    "record": "3-2",
+    "linescores": []
+   },
+   {
+    "team": {
+     "id": "2641",
+     "abbr": "TTU",
+     "name": "Texas Tech Red Raiders",
+     "short": "Texas Tech",
+     "location": "Texas Tech",
+     "mascot": "Red Raiders",
+     "color": "#da291c",
+     "alt": "#000000",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2641.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2641.png"
+    },
+    "homeAway": "away",
+    "score": null,
+    "winner": false,
+    "rank": 5,
+    "record": "5-1",
+    "linescores": []
+   }
+  ]
+ },
+ {
+  "id": "401920540",
+  "date": "2026-11-27T04:30Z",
+  "event": "Players Era 16",
+  "label": null,
+  "kind": "round",
+  "venue": {
+   "id": "5060",
+   "name": "T-Mobile Arena"
+  },
+  "status": {
+   "state": "pre",
+   "name": "STATUS_SCHEDULED",
+   "completed": false,
+   "detail": "Thu, November 26th at 11:30 PM EST",
+   "shortDetail": "11/26 - 11:30 PM EST",
+   "clock": "0:00",
+   "period": 0
+  },
+  "broadcast": "ESPN",
+  "odds": {
+   "details": "GONZ -3.5",
+   "overUnder": 160.5
+  },
+  "competitors": [
+   {
+    "team": {
+     "id": "2250",
+     "abbr": "GONZ",
+     "name": "Gonzaga Bulldogs",
+     "short": "Gonzaga",
+     "location": "Gonzaga",
+     "mascot": "Bulldogs",
+     "color": "#041e42",
+     "alt": "#c8102e",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2250.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2250.png"
+    },
+    "homeAway": "home",
+    "score": null,
+    "winner": false,
+    "rank": 22,
+    "record": "4-1",
+    "linescores": []
+   },
+   {
+    "team": {
+     "id": "239",
+     "abbr": "BAY",
+     "name": "Baylor Bears",
+     "short": "Baylor",
+     "location": "Baylor",
+     "mascot": "Bears",
+     "color": "#154734",
+     "alt": "#ffb81c",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/239.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/239.png"
+    },
+    "homeAway": "away",
+    "score": null,
+    "winner": false,
+    "rank": null,
+    "record": "5-1",
+    "linescores": []
+   }
+  ]
+ },
+ {
+  "id": "401920533",
+  "date": "2026-11-27T18:00Z",
+  "event": "Players Era 16",
+  "label": "Third Place Game",
+  "kind": "third",
+  "venue": {
+   "id": "4005",
+   "name": "Michelob ULTRA Arena"
+  },
+  "status": {
+   "state": "pre",
+   "name": "STATUS_SCHEDULED",
+   "completed": false,
+   "detail": "Fri, November 27th at 1:00 PM EST",
+   "shortDetail": "11/27 - 1:00 PM EST",
+   "clock": "0:00",
+   "period": 0
+  },
+  "broadcast": null,
+  "odds": null,
+  "competitors": [
+   {
+    "team": null,
+    "homeAway": "home",
+    "score": null,
+    "winner": false,
+    "rank": null,
+    "record": null,
+    "linescores": []
+   },
+   {
+    "team": null,
+    "homeAway": "away",
+    "score": null,
+    "winner": false,
+    "rank": null,
+    "record": null,
+    "linescores": []
+   }
+  ]
+ },
+ {
+  "id": "401920542",
+  "date": "2026-11-27T20:00Z",
+  "event": "Players Era 16",
+  "label": "Third Place Game",
+  "kind": "third",
+  "venue": {
+   "id": "5060",
+   "name": "T-Mobile Arena"
+  },
+  "status": {
+   "state": "pre",
+   "name": "STATUS_SCHEDULED",
+   "completed": false,
+   "detail": "Fri, November 27th at 3:00 PM EST",
+   "shortDetail": "11/27 - 3:00 PM EST",
+   "clock": "0:00",
+   "period": 0
+  },
+  "broadcast": null,
+  "odds": null,
+  "competitors": [
+   {
+    "team": null,
+    "homeAway": "home",
+    "score": null,
+    "winner": false,
+    "rank": null,
+    "record": null,
+    "linescores": []
+   },
+   {
+    "team": null,
+    "homeAway": "away",
+    "score": null,
+    "winner": false,
+    "rank": null,
+    "record": null,
+    "linescores": []
+   }
+  ]
+ },
+ {
+  "id": "401920532",
+  "date": "2026-11-27T20:30Z",
+  "event": "Players Era 16",
+  "label": "Seventh Place Game",
+  "kind": "seventh",
+  "venue": {
+   "id": "4005",
+   "name": "Michelob ULTRA Arena"
+  },
+  "status": {
+   "state": "pre",
+   "name": "STATUS_SCHEDULED",
+   "completed": false,
+   "detail": "Fri, November 27th at 3:30 PM EST",
+   "shortDetail": "11/27 - 3:30 PM EST",
+   "clock": "0:00",
+   "period": 0
+  },
+  "broadcast": null,
+  "odds": null,
+  "competitors": [
+   {
+    "team": null,
+    "homeAway": "home",
+    "score": null,
+    "winner": false,
+    "rank": null,
+    "record": null,
+    "linescores": []
+   },
+   {
+    "team": null,
+    "homeAway": "away",
+    "score": null,
+    "winner": false,
+    "rank": null,
+    "record": null,
+    "linescores": []
+   }
+  ]
+ },
+ {
+  "id": "401920541",
+  "date": "2026-11-27T22:30Z",
+  "event": "Players Era 16",
+  "label": "Seventh Place Game",
+  "kind": "seventh",
+  "venue": {
+   "id": "5060",
+   "name": "T-Mobile Arena"
+  },
+  "status": {
+   "state": "pre",
+   "name": "STATUS_SCHEDULED",
+   "completed": false,
+   "detail": "Fri, November 27th at 5:30 PM EST",
+   "shortDetail": "11/27 - 5:30 PM EST",
+   "clock": "0:00",
+   "period": 0
+  },
+  "broadcast": null,
+  "odds": null,
+  "competitors": [
+   {
+    "team": null,
+    "homeAway": "home",
+    "score": null,
+    "winner": false,
+    "rank": null,
+    "record": null,
+    "linescores": []
+   },
+   {
+    "team": null,
+    "homeAway": "away",
+    "score": null,
+    "winner": false,
+    "rank": null,
+    "record": null,
+    "linescores": []
+   }
+  ]
+ },
+ {
+  "id": "401920543",
+  "date": "2026-11-28T01:30Z",
+  "event": "Players Era 16",
+  "label": "Fifth Place Game",
+  "kind": "fifth",
+  "venue": {
+   "id": "5060",
+   "name": "T-Mobile Arena"
+  },
+  "status": {
+   "state": "pre",
+   "name": "STATUS_SCHEDULED",
+   "completed": false,
+   "detail": "Fri, November 27th at 8:30 PM EST",
+   "shortDetail": "11/27 - 8:30 PM EST",
+   "clock": "0:00",
+   "period": 0
+  },
+  "broadcast": null,
+  "odds": null,
+  "competitors": [
+   {
+    "team": null,
+    "homeAway": "home",
+    "score": null,
+    "winner": false,
+    "rank": null,
+    "record": null,
+    "linescores": []
+   },
+   {
+    "team": null,
+    "homeAway": "away",
+    "score": null,
+    "winner": false,
+    "rank": null,
+    "record": null,
+    "linescores": []
+   }
+  ]
+ },
+ {
+  "id": "401920534",
+  "date": "2026-11-28T02:00Z",
+  "event": "Players Era 16",
+  "label": "Bracket Final",
+  "kind": "final",
+  "venue": {
+   "id": "4005",
+   "name": "Michelob ULTRA Arena"
+  },
+  "status": {
+   "state": "pre",
+   "name": "STATUS_SCHEDULED",
+   "completed": false,
+   "detail": "Fri, November 27th at 9:00 PM EST",
+   "shortDetail": "11/27 - 9:00 PM EST",
+   "clock": "0:00",
+   "period": 0
+  },
+  "broadcast": null,
+  "odds": null,
+  "competitors": [
+   {
+    "team": null,
+    "homeAway": "home",
+    "score": null,
+    "winner": false,
+    "rank": null,
+    "record": null,
+    "linescores": []
+   },
+   {
+    "team": null,
+    "homeAway": "away",
+    "score": null,
+    "winner": false,
+    "rank": null,
+    "record": null,
+    "linescores": []
+   }
+  ]
+ },
+ {
+  "id": "401920544",
+  "date": "2026-11-28T04:00Z",
+  "event": "Players Era 16",
+  "label": "Bracket Final",
+  "kind": "final",
+  "venue": {
+   "id": "5060",
+   "name": "T-Mobile Arena"
+  },
+  "status": {
+   "state": "pre",
+   "name": "STATUS_SCHEDULED",
+   "completed": false,
+   "detail": "Fri, November 27th at 11:00 PM EST",
+   "shortDetail": "11/27 - 11:00 PM EST",
+   "clock": "0:00",
+   "period": 0
+  },
+  "broadcast": null,
+  "odds": null,
+  "competitors": [
+   {
+    "team": null,
+    "homeAway": "home",
+    "score": null,
+    "winner": false,
+    "rank": null,
+    "record": null,
+    "linescores": []
+   },
+   {
+    "team": null,
+    "homeAway": "away",
+    "score": null,
+    "winner": false,
+    "rank": null,
+    "record": null,
+    "linescores": []
+   }
+  ]
+ },
+ {
+  "id": "401920535",
+  "date": "2026-11-28T04:30Z",
+  "event": "Players Era 16",
+  "label": "Fifth Place Game",
+  "kind": "fifth",
+  "venue": {
+   "id": "4005",
+   "name": "Michelob ULTRA Arena"
+  },
+  "status": {
+   "state": "pre",
+   "name": "STATUS_SCHEDULED",
+   "completed": false,
+   "detail": "Fri, November 27th at 11:30 PM EST",
+   "shortDetail": "11/27 - 11:30 PM EST",
+   "clock": "0:00",
+   "period": 0
+  },
+  "broadcast": null,
+  "odds": null,
+  "competitors": [
+   {
+    "team": null,
+    "homeAway": "home",
+    "score": null,
+    "winner": false,
+    "rank": null,
+    "record": null,
+    "linescores": []
+   },
+   {
+    "team": null,
+    "homeAway": "away",
+    "score": null,
+    "winner": false,
+    "rank": null,
+    "record": null,
+    "linescores": []
+   }
+  ]
+ },
+ {
+  "id": "401920536",
+  "date": "2026-11-29T03:30Z",
+  "event": "Players Era 16",
+  "label": "Championship",
+  "kind": "championship",
+  "venue": {
+   "id": "4005",
+   "name": "Michelob ULTRA Arena"
+  },
+  "status": {
+   "state": "pre",
+   "name": "STATUS_SCHEDULED",
+   "completed": false,
+   "detail": "Sat, November 28th at 10:30 PM EST",
+   "shortDetail": "11/28 - 10:30 PM EST",
+   "clock": "0:00",
+   "period": 0
+  },
+  "broadcast": "ESPN",
+  "odds": null,
+  "competitors": [
+   {
+    "team": null,
+    "homeAway": "home",
+    "score": null,
+    "winner": false,
+    "rank": null,
+    "record": null,
+    "linescores": []
+   },
+   {
+    "team": null,
+    "homeAway": "away",
+    "score": null,
+    "winner": false,
+    "rank": null,
+    "record": null,
+    "linescores": []
+   }
+  ]
+ },
+ {
+  "id": "401906773",
+  "date": "2026-11-17T21:51Z",
+  "event": "Players Era 8",
+  "label": null,
+  "kind": "round",
+  "venue": {
+   "id": "4005",
+   "name": "Michelob ULTRA Arena"
+  },
+  "status": {
+   "state": "post",
+   "name": "STATUS_FINAL",
+   "completed": true,
+   "detail": "Final",
+   "shortDetail": "Final",
+   "clock": "0:00",
+   "period": 2
+  },
+  "broadcast": "ESPN",
+  "odds": null,
+  "competitors": [
+   {
+    "team": {
+     "id": "57",
+     "abbr": "FLA",
+     "name": "Florida Gators",
+     "short": "Florida",
+     "location": "Florida",
+     "mascot": "Gators",
+     "color": "#0021a5",
+     "alt": "#fa4616",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/57.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/57.png"
+    },
+    "homeAway": "home",
+    "score": 86,
+    "winner": true,
+    "rank": 1,
+    "record": "5-0",
+    "linescores": [
+     47,
+     39
+    ]
+   },
+   {
+    "team": {
+     "id": "87",
+     "abbr": "ND",
+     "name": "Notre Dame Fighting Irish",
+     "short": "Notre Dame",
+     "location": "Notre Dame",
+     "mascot": "Fighting Irish",
+     "color": "#062340",
+     "alt": "#c99700",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/87.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/87.png"
+    },
+    "homeAway": "away",
+    "score": 78,
+    "winner": false,
+    "rank": null,
+    "record": "4-1",
+    "linescores": [
+     32,
+     46
+    ]
+   }
+  ]
+ },
+ {
+  "id": "401920511",
+  "date": "2026-11-17T19:00Z",
+  "event": "Players Era 8",
+  "label": null,
+  "kind": "round",
+  "venue": {
+   "id": "4005",
+   "name": "Michelob ULTRA Arena"
+  },
+  "status": {
+   "state": "post",
+   "name": "STATUS_FINAL",
+   "completed": true,
+   "detail": "Final",
+   "shortDetail": "Final",
+   "clock": "0:00",
+   "period": 2
+  },
+  "broadcast": "ESPN",
+  "odds": null,
+  "competitors": [
+   {
+    "team": {
+     "id": "248",
+     "abbr": "HOU",
+     "name": "Houston Cougars",
+     "short": "Houston",
+     "location": "Houston",
+     "mascot": "Cougars",
+     "color": "#c8102e",
+     "alt": "#ffffff",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/248.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/248.png"
+    },
+    "homeAway": "home",
+    "score": 85,
+    "winner": true,
+    "rank": 8,
+    "record": "4-0",
+    "linescores": [
+     45,
+     40
+    ]
+   },
+   {
+    "team": {
+     "id": "164",
+     "abbr": "RUTG",
+     "name": "Rutgers Scarlet Knights",
+     "short": "Rutgers",
+     "location": "Rutgers",
+     "mascot": "Scarlet Knights",
+     "color": "#ce0e2d",
+     "alt": "#ffffff",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/164.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/164.png"
+    },
+    "homeAway": "away",
+    "score": 73,
+    "winner": false,
+    "rank": null,
+    "record": "3-1",
+    "linescores": [
+     30,
+     43
+    ]
+   }
+  ]
+ },
+ {
+  "id": "401909787",
+  "date": "2026-11-18T02:30Z",
+  "event": "Players Era 8",
+  "label": null,
+  "kind": "round",
+  "venue": {
+   "id": "4005",
+   "name": "Michelob ULTRA Arena"
+  },
+  "status": {
+   "state": "post",
+   "name": "STATUS_FINAL",
+   "completed": true,
+   "detail": "Final",
+   "shortDetail": "Final",
+   "clock": "0:00",
+   "period": 2
+  },
+  "broadcast": "ESPN",
+  "odds": null,
+  "competitors": [
+   {
+    "team": {
+     "id": "2305",
+     "abbr": "KU",
+     "name": "Kansas Jayhawks",
+     "short": "Kansas",
+     "location": "Kansas",
+     "mascot": "Jayhawks",
+     "color": "#0051ba",
+     "alt": "#e8000d",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2305.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2305.png"
+    },
+    "homeAway": "home",
+    "score": 102,
+    "winner": true,
+    "rank": 11,
+    "record": "4-0",
+    "linescores": [
+     55,
+     47
+    ]
+   },
+   {
+    "team": {
+     "id": "2439",
+     "abbr": "UNLV",
+     "name": "UNLV Rebels",
+     "short": "UNLV",
+     "location": "UNLV",
+     "mascot": "Rebels",
+     "color": "#cf0a2c",
+     "alt": "#cac8c8",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2439.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2439.png"
+    },
+    "homeAway": "away",
+    "score": 77,
+    "winner": false,
+    "rank": null,
+    "record": "3-1",
+    "linescores": [
+     35,
+     42
+    ]
+   }
+  ]
+ },
+ {
+  "id": "401920512",
+  "date": "2026-11-18T04:59Z",
+  "event": "Players Era 8",
+  "label": null,
+  "kind": "round",
+  "venue": {
+   "id": "4005",
+   "name": "Michelob ULTRA Arena"
+  },
+  "status": {
+   "state": "post",
+   "name": "STATUS_FINAL",
+   "completed": true,
+   "detail": "Final",
+   "shortDetail": "Final",
+   "clock": "0:00",
+   "period": 2
+  },
+  "broadcast": "ESPN",
+  "odds": null,
+  "competitors": [
+   {
+    "team": {
+     "id": "2",
+     "abbr": "AUB",
+     "name": "Auburn Tigers",
+     "short": "Auburn",
+     "location": "Auburn",
+     "mascot": "Tigers",
+     "color": "#002b5c",
+     "alt": "#f26522",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2.png"
+    },
+    "homeAway": "home",
+    "score": 70,
+    "winner": false,
+    "rank": null,
+    "record": "2-2",
+    "linescores": [
+     31,
+     39
+    ]
+   },
+   {
+    "team": {
+     "id": "277",
+     "abbr": "WVU",
+     "name": "West Virginia Mountaineers",
+     "short": "West Virginia",
+     "location": "West Virginia",
+     "mascot": "Mountaineers",
+     "color": "#eaaa00",
+     "alt": "#002855",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/277.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/277.png"
+    },
+    "homeAway": "away",
+    "score": 76,
+    "winner": true,
+    "rank": null,
+    "record": "4-0",
+    "linescores": [
+     36,
+     40
+    ]
+   }
+  ]
+ },
+ {
+  "id": "401920514",
+  "date": "2026-11-18T21:48Z",
+  "event": "Players Era 8",
+  "label": null,
+  "kind": "round",
+  "venue": {
+   "id": "4005",
+   "name": "Michelob ULTRA Arena"
+  },
+  "status": {
+   "state": "post",
+   "name": "STATUS_FINAL",
+   "completed": true,
+   "detail": "Final",
+   "shortDetail": "Final",
+   "clock": "0:00",
+   "period": 2
+  },
+  "broadcast": "ESPN",
+  "odds": null,
+  "competitors": [
+   {
+    "team": {
+     "id": "57",
+     "abbr": "FLA",
+     "name": "Florida Gators",
+     "short": "Florida",
+     "location": "Florida",
+     "mascot": "Gators",
+     "color": "#0021a5",
+     "alt": "#fa4616",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/57.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/57.png"
+    },
+    "homeAway": "home",
+    "score": 76,
+    "winner": false,
+    "rank": 1,
+    "record": "5-1",
+    "linescores": [
+     40,
+     36
+    ]
+   },
+   {
+    "team": {
+     "id": "248",
+     "abbr": "HOU",
+     "name": "Houston Cougars",
+     "short": "Houston",
+     "location": "Houston",
+     "mascot": "Cougars",
+     "color": "#c8102e",
+     "alt": "#ffffff",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/248.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/248.png"
+    },
+    "homeAway": "away",
+    "score": 86,
+    "winner": true,
+    "rank": 8,
+    "record": "5-0",
+    "linescores": [
+     37,
+     49
+    ]
+   }
+  ]
+ },
+ {
+  "id": "401920515",
+  "date": "2026-11-19T00:30Z",
+  "event": "Players Era 8",
+  "label": null,
+  "kind": "round",
+  "venue": {
+   "id": "4005",
+   "name": "Michelob ULTRA Arena"
+  },
+  "status": {
+   "state": "post",
+   "name": "STATUS_FINAL",
+   "completed": true,
+   "detail": "Final",
+   "shortDetail": "Final",
+   "clock": "0:00",
+   "period": 2
+  },
+  "broadcast": "ESPN2",
+  "odds": null,
+  "competitors": [
+   {
+    "team": {
+     "id": "277",
+     "abbr": "WVU",
+     "name": "West Virginia Mountaineers",
+     "short": "West Virginia",
+     "location": "West Virginia",
+     "mascot": "Mountaineers",
+     "color": "#eaaa00",
+     "alt": "#002855",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/277.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/277.png"
+    },
+    "homeAway": "home",
+    "score": 82,
+    "winner": false,
+    "rank": null,
+    "record": "4-1",
+    "linescores": [
+     49,
+     33
+    ]
+   },
+   {
+    "team": {
+     "id": "2305",
+     "abbr": "KU",
+     "name": "Kansas Jayhawks",
+     "short": "Kansas",
+     "location": "Kansas",
+     "mascot": "Jayhawks",
+     "color": "#0051ba",
+     "alt": "#e8000d",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2305.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2305.png"
+    },
+    "homeAway": "away",
+    "score": 86,
+    "winner": true,
+    "rank": 11,
+    "record": "5-0",
+    "linescores": [
+     44,
+     42
+    ]
+   }
+  ]
+ },
+ {
+  "id": "401920513",
+  "date": "2026-11-18T19:00Z",
+  "event": "Players Era 8",
+  "label": null,
+  "kind": "round",
+  "venue": {
+   "id": "4005",
+   "name": "Michelob ULTRA Arena"
+  },
+  "status": {
+   "state": "post",
+   "name": "STATUS_FINAL",
+   "completed": true,
+   "detail": "Final/OT",
+   "shortDetail": "Final/OT",
+   "clock": "0:00",
+   "period": 3
+  },
+  "broadcast": "ESPN",
+  "odds": null,
+  "competitors": [
+   {
+    "team": {
+     "id": "87",
+     "abbr": "ND",
+     "name": "Notre Dame Fighting Irish",
+     "short": "Notre Dame",
+     "location": "Notre Dame",
+     "mascot": "Fighting Irish",
+     "color": "#062340",
+     "alt": "#c99700",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/87.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/87.png"
+    },
+    "homeAway": "home",
+    "score": 110,
+    "winner": true,
+    "rank": null,
+    "record": "5-1",
+    "linescores": [
+     49,
+     46,
+     15
+    ]
+   },
+   {
+    "team": {
+     "id": "164",
+     "abbr": "RUTG",
+     "name": "Rutgers Scarlet Knights",
+     "short": "Rutgers",
+     "location": "Rutgers",
+     "mascot": "Scarlet Knights",
+     "color": "#ce0e2d",
+     "alt": "#ffffff",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/164.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/164.png"
+    },
+    "homeAway": "away",
+    "score": 100,
+    "winner": false,
+    "rank": null,
+    "record": "3-2",
+    "linescores": [
+     45,
+     50,
+     5
+    ]
+   }
+  ]
+ },
+ {
+  "id": "401920516",
+  "date": "2026-11-19T03:30Z",
+  "event": "Players Era 8",
+  "label": null,
+  "kind": "round",
+  "venue": {
+   "id": "4005",
+   "name": "Michelob ULTRA Arena"
+  },
+  "status": {
+   "state": "post",
+   "name": "STATUS_FINAL",
+   "completed": true,
+   "detail": "Final",
+   "shortDetail": "Final",
+   "clock": "0:00",
+   "period": 2
+  },
+  "broadcast": "ESPN2",
+  "odds": null,
+  "competitors": [
+   {
+    "team": {
+     "id": "2",
+     "abbr": "AUB",
+     "name": "Auburn Tigers",
+     "short": "Auburn",
+     "location": "Auburn",
+     "mascot": "Tigers",
+     "color": "#002b5c",
+     "alt": "#f26522",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2.png"
+    },
+    "homeAway": "home",
+    "score": 86,
+    "winner": true,
+    "rank": null,
+    "record": "3-2",
+    "linescores": [
+     37,
+     49
+    ]
+   },
+   {
+    "team": {
+     "id": "2439",
+     "abbr": "UNLV",
+     "name": "UNLV Rebels",
+     "short": "UNLV",
+     "location": "UNLV",
+     "mascot": "Rebels",
+     "color": "#cf0a2c",
+     "alt": "#cac8c8",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2439.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2439.png"
+    },
+    "homeAway": "away",
+    "score": 71,
+    "winner": false,
+    "rank": null,
+    "record": "3-2",
+    "linescores": [
+     29,
+     42
+    ]
+   }
+  ]
+ },
+ {
+  "id": "401920517",
+  "date": "2026-11-19T19:30Z",
+  "event": "Players Era 8",
+  "label": "Third Place Game",
+  "kind": "third",
+  "venue": {
+   "id": "4005",
+   "name": "Michelob ULTRA Arena"
+  },
+  "status": {
+   "state": "post",
+   "name": "STATUS_FINAL",
+   "completed": true,
+   "detail": "Final",
+   "shortDetail": "Final",
+   "clock": "0:00",
+   "period": 2
+  },
+  "broadcast": "ESPN",
+  "odds": null,
+  "competitors": [
+   {
+    "team": {
+     "id": "277",
+     "abbr": "WVU",
+     "name": "West Virginia Mountaineers",
+     "short": "West Virginia",
+     "location": "West Virginia",
+     "mascot": "Mountaineers",
+     "color": "#eaaa00",
+     "alt": "#002855",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/277.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/277.png"
+    },
+    "homeAway": "home",
+    "score": 72,
+    "winner": false,
+    "rank": null,
+    "record": "4-2",
+    "linescores": [
+     30,
+     42
+    ]
+   },
+   {
+    "team": {
+     "id": "57",
+     "abbr": "FLA",
+     "name": "Florida Gators",
+     "short": "Florida",
+     "location": "Florida",
+     "mascot": "Gators",
+     "color": "#0021a5",
+     "alt": "#fa4616",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/57.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/57.png"
+    },
+    "homeAway": "away",
+    "score": 85,
+    "winner": true,
+    "rank": 1,
+    "record": "6-1",
+    "linescores": [
+     40,
+     45
+    ]
+   }
+  ]
+ },
+ {
+  "id": "401920518",
+  "date": "2026-11-20T04:00Z",
+  "event": "Players Era 8",
+  "label": "Championship",
+  "kind": "championship",
+  "venue": {
+   "id": "4005",
+   "name": "Michelob ULTRA Arena"
+  },
+  "status": {
+   "state": "post",
+   "name": "STATUS_FINAL",
+   "completed": true,
+   "detail": "Final",
+   "shortDetail": "Final",
+   "clock": "0:00",
+   "period": 2
+  },
+  "broadcast": "ESPN",
+  "odds": null,
+  "competitors": [
+   {
+    "team": {
+     "id": "2305",
+     "abbr": "KU",
+     "name": "Kansas Jayhawks",
+     "short": "Kansas",
+     "location": "Kansas",
+     "mascot": "Jayhawks",
+     "color": "#0051ba",
+     "alt": "#e8000d",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2305.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2305.png"
+    },
+    "homeAway": "home",
+    "score": 83,
+    "winner": false,
+    "rank": 11,
+    "record": "5-1",
+    "linescores": [
+     34,
+     49
+    ]
+   },
+   {
+    "team": {
+     "id": "248",
+     "abbr": "HOU",
+     "name": "Houston Cougars",
+     "short": "Houston",
+     "location": "Houston",
+     "mascot": "Cougars",
+     "color": "#c8102e",
+     "alt": "#ffffff",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/248.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/248.png"
+    },
+    "homeAway": "away",
+    "score": 92,
+    "winner": true,
+    "rank": 8,
+    "record": "6-0",
+    "linescores": [
+     54,
+     38
+    ]
+   }
+  ]
+ },
+ {
+  "id": "401920519",
+  "date": "2026-11-19T22:00Z",
+  "event": "Players Era 8",
+  "label": "Fifth Place",
+  "kind": "fifth",
+  "venue": {
+   "id": "4005",
+   "name": "Michelob ULTRA Arena"
+  },
+  "status": {
+   "state": "post",
+   "name": "STATUS_FINAL",
+   "completed": true,
+   "detail": "Final",
+   "shortDetail": "Final",
+   "clock": "0:00",
+   "period": 2
+  },
+  "broadcast": "ESPN",
+  "odds": null,
+  "competitors": [
+   {
+    "team": {
+     "id": "2",
+     "abbr": "AUB",
+     "name": "Auburn Tigers",
+     "short": "Auburn",
+     "location": "Auburn",
+     "mascot": "Tigers",
+     "color": "#002b5c",
+     "alt": "#f26522",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2.png"
+    },
+    "homeAway": "home",
+    "score": 73,
+    "winner": false,
+    "rank": null,
+    "record": "3-3",
+    "linescores": [
+     36,
+     37
+    ]
+   },
+   {
+    "team": {
+     "id": "87",
+     "abbr": "ND",
+     "name": "Notre Dame Fighting Irish",
+     "short": "Notre Dame",
+     "location": "Notre Dame",
+     "mascot": "Fighting Irish",
+     "color": "#062340",
+     "alt": "#c99700",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/87.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/87.png"
+    },
+    "homeAway": "away",
+    "score": 78,
+    "winner": true,
+    "rank": null,
+    "record": "6-1",
+    "linescores": [
+     42,
+     36
+    ]
+   }
+  ]
+ },
+ {
+  "id": "401920520",
+  "date": "2026-11-20T01:30Z",
+  "event": "Players Era 8",
+  "label": "Seventh Place",
+  "kind": "seventh",
+  "venue": {
+   "id": "4005",
+   "name": "Michelob ULTRA Arena"
+  },
+  "status": {
+   "state": "post",
+   "name": "STATUS_FINAL",
+   "completed": true,
+   "detail": "Final",
+   "shortDetail": "Final",
+   "clock": "0:00",
+   "period": 2
+  },
+  "broadcast": "ESPN2",
+  "odds": null,
+  "competitors": [
+   {
+    "team": {
+     "id": "2439",
+     "abbr": "UNLV",
+     "name": "UNLV Rebels",
+     "short": "UNLV",
+     "location": "UNLV",
+     "mascot": "Rebels",
+     "color": "#cf0a2c",
+     "alt": "#cac8c8",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2439.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2439.png"
+    },
+    "homeAway": "home",
+    "score": 70,
+    "winner": false,
+    "rank": null,
+    "record": "3-3",
+    "linescores": [
+     32,
+     38
+    ]
+   },
+   {
+    "team": {
+     "id": "164",
+     "abbr": "RUTG",
+     "name": "Rutgers Scarlet Knights",
+     "short": "Rutgers",
+     "location": "Rutgers",
+     "mascot": "Scarlet Knights",
+     "color": "#ce0e2d",
+     "alt": "#ffffff",
+     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/164.png",
+     "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/164.png"
+    },
+    "homeAway": "away",
+    "score": 89,
+    "winner": true,
+    "rank": null,
+    "record": "4-2",
+    "linescores": [
+     51,
+     38
+    ]
+   }
+  ]
+ }
+]
